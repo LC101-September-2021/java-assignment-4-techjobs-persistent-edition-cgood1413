@@ -11,3 +11,8 @@ SELECT name FROM employer;
 DROP TABLE job;
 
 -- Part 4: Test it with SQL
+
+SELECT * FROM skill s
+INNER JOIN job_skills j ON s.id = j.skills_id
+WHERE j.jobs_id IS NOT NULL
+ORDER BY name;
